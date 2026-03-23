@@ -10,5 +10,17 @@ public class Main {
         book.printInfo();
         book2.printInfo();
         book3.printInfo();
+
+
+        Reader user = new Reader("John", "Smith", "123", 1);
+        Reader user2 = new Reader("Ryan", "Johnson", "968", 0);
+        Reader user3 = new Reader("Muhammad", "Ali", "576", 1);
+
+        user2.increaseBorrowedCount();
+        user3.decreaseBorrowedCount();
+
+        user.printData();
+        user2.printData();
+        user3.printData();
     }
 }
