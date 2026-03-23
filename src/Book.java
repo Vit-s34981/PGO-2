@@ -18,4 +18,12 @@ public class Book {
     public void returnBook() {
         available = true;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
 }
