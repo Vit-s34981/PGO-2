@@ -2,24 +2,21 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library(10);
         
-        Book book = new Book("The Art of War", "Sun Tzu", 100, true);
-        Book book2 = new Book("The Art of Song", "Sun Su", 395, false);
-        Book book3 = new Book("The Failure of Dance", "Moon Tzu", 25, true);
-        
-        book2.returnBook();
-        book3.borrow();
-
-        book.printInfo();
-        book2.printInfo();
-        book3.printInfo();
-
+        library.addBook(new Book("The Art of War", "Sun Tzu", 100, true));
+        library.addBook(new Book("The Art of Song", "Sun Su", 395, false));
+        library.addBook(new Book("The Failure of Dance", "Moon Tzu", 25, true));
 
         Reader user = new Reader("John", "Smith", "123", 1);
         Reader user2 = new Reader("Ryan", "Johnson", "968", 0);
         Reader user3 = new Reader("Muhammad", "Ali", "576", 1);
 
-        user2.increaseBorrowedCount();
-        user3.decreaseBorrowedCount();
+        library.printAvailableBooks();
+        
+        library.borrowBook("The Art of War", user2);
+
+        library.printAvailableBooks();
+
+        library.returnBook("The Art of War", user2);
 
         user.printData();
         user2.printData();

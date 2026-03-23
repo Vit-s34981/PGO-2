@@ -24,4 +24,8 @@ public class Reader {
             borrowedCount--;
         }
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
 }
